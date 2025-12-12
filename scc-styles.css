@@ -1,0 +1,701 @@
+/* ============================================
+   SCC PAGE SPECIFIC STYLES - GREEN THEME
+   ============================================ */
+
+/* Override body background for SCC page */
+body.scc-footer-green,
+.scc-hero-section,
+.scc-intro-section,
+.scc-logo-section,
+.scc-vmg-section {
+    background: linear-gradient(135deg, #4CAF50 0%, #A5D6A7 100%);
+    background-attachment: fixed;
+}
+
+/* ============================================
+   GREEN PARTICLES
+   ============================================ */
+.scc-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.scc-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(76, 175, 80, 0.15);
+    filter: blur(40px);
+    animation: float-scc-particle 25s infinite ease-in-out;
+}
+
+.scc-particle-1 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.scc-particle-2 {
+    width: 120px;
+    height: 120px;
+    top: 30%;
+    right: 15%;
+    animation-delay: -4s;
+}
+
+.scc-particle-3 {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -8s;
+}
+
+.scc-particle-4 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 30%;
+    animation-delay: -12s;
+}
+
+.scc-particle-5 {
+    width: 140px;
+    height: 140px;
+    bottom: 40%;
+    left: 50%;
+    animation-delay: -16s;
+}
+
+.scc-particle-6 {
+    width: 130px;
+    height: 130px;
+    top: 70%;
+    right: 10%;
+    animation-delay: -20s;
+}
+
+@keyframes float-scc-particle {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translate(60px, -60px) scale(1.2);
+        opacity: 0.25;
+    }
+}
+
+/* ============================================
+   SECTION 1: HERO SECTION
+   ============================================ */
+.scc-hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.scc-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.scc-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.scc-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(76, 175, 80, 0.7) 0%, transparent 100%);
+}
+
+.scc-hero-glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 30px rgba(76, 175, 80, 0.3);
+}
+
+.scc-hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+/* ============================================
+   SECTION 1: INTRO SECTION
+   ============================================ */
+.scc-intro-section {
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.scc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.scc-glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 30px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+.scc-glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(76, 175, 80, 0.4);
+}
+
+.scc-intro-text {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.scc-intro-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   SECTION 2: LOGO & SYMBOL SECTION
+   ============================================ */
+.scc-logo-section {
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.scc-logo-content-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.scc-logo-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 30px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 100px;
+}
+
+.scc-logo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(76, 175, 80, 0.5);
+}
+
+.scc-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scc-logo-img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+.scc-symbol-content {
+    flex: 1;
+}
+
+.scc-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Accordion Styles */
+.scc-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.scc-accordion-item {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.scc-accordion-item:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), 0 0 25px rgba(76, 175, 80, 0.3);
+}
+
+.scc-accordion-header {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.85);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.scc-accordion-header:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.scc-accordion-header i {
+    transition: transform 0.3s ease;
+}
+
+.scc-accordion-item.active .scc-accordion-header i {
+    transform: rotate(180deg);
+}
+
+.scc-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 2rem;
+}
+
+.scc-accordion-item.active .scc-accordion-content {
+    max-height: 2000px;
+    padding: 0 2rem 2rem;
+}
+
+.scc-accordion-content p {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.scc-accordion-content h4 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.scc-accordion-content h4:first-child {
+    margin-top: 0;
+}
+
+/* ============================================
+   SECTION 3: VISION, MISSION, GOALS SECTION
+   ============================================ */
+.scc-vmg-section {
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.scc-vmg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.scc-vmg-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 30px rgba(76, 175, 80, 0.3);
+    transition: all 0.3s ease;
+}
+
+.scc-vmg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(76, 175, 80, 0.5);
+}
+
+.scc-vmg-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: rgba(76, 175, 80, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scc-vmg-icon i {
+    font-size: 3rem;
+    color: rgba(76, 175, 80, 0.9);
+    text-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.scc-vmg-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.scc-vmg-text {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.8;
+    text-align: left;
+}
+
+.scc-goals-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.scc-goals-list li {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.scc-goals-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: rgba(76, 175, 80, 0.9);
+    font-weight: bold;
+}
+
+.scc-core-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.scc-core-value {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.85);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.scc-core-value:hover {
+    background: rgba(76, 175, 80, 0.9);
+    color: #FFFFFF;
+    border-color: rgba(76, 175, 80, 1);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+    transform: translateY(-2px);
+}
+
+.scc-acts-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.scc-acts-list li {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.scc-acts-list li strong {
+    color: #FFD700;
+    font-weight: 700;
+}
+
+/* Yellow color for all strong tags in SCC page */
+.scc-vmg-card strong,
+.scc-accordion-content strong {
+    color: #FFD700;
+    font-weight: 700;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpSCC 0.8s ease-out forwards;
+}
+
+.fade-up-delay {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpSCC 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes fadeUpSCC {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================================
+   SCC FOOTER - GREEN THEME
+   ============================================ */
+body.scc-footer-green .footer,
+body.scc-footer-green .footer.visible,
+.scc-footer-green .footer,
+.scc-footer-green .footer.visible,
+footer.scc-green-footer,
+footer.scc-green-footer.visible {
+    background: linear-gradient(135deg, #4CAF50 0%, #A5D6A7 100%) !important;
+    background-color: #4CAF50 !important;
+    background-image: none !important;
+    --purple-deep: #4CAF50 !important;
+    --purple-medium: #A5D6A7 !important;
+    border-top: 2px solid rgba(255, 255, 255, 0.3) !important;
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+/* Hide purple background animation on SCC page */
+body.scc-footer-green .background-animation {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* SCC Footer - Override all text colors */
+body.scc-footer-green .footer .footer-title,
+.scc-footer-green .footer .footer-title {
+    color: rgba(0, 0, 0, 0.85) !important;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+body.scc-footer-green .footer .footer-copyright,
+.scc-footer-green .footer .footer-copyright {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+body.scc-footer-green .footer .contact-info,
+.scc-footer-green .footer .contact-info {
+    color: rgba(0, 0, 0, 0.85) !important;
+}
+
+body.scc-footer-green .footer .contact-info strong,
+.scc-footer-green .footer .contact-info strong {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* SCC Footer - Social icons with green glow */
+body.scc-footer-green .footer .glass-circle,
+.scc-footer-green .footer .glass-circle,
+footer.scc-green-footer .glass-circle {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+}
+
+body.scc-footer-green .footer .glass-circle:hover,
+.scc-footer-green .footer .glass-circle:hover,
+footer.scc-green-footer .glass-circle:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(76, 175, 80, 0.9) !important;
+    box-shadow: 0 0 30px rgba(76, 175, 80, 0.8), 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+    transform: scale(1.15) translateY(-2px) !important;
+}
+
+body.scc-footer-green .footer .social-icon,
+.scc-footer-green .footer .social-icon,
+footer.scc-green-footer .social-icon {
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-size: 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+body.scc-footer-green .footer .social-icon:hover,
+.scc-footer-green .footer .social-icon:hover,
+footer.scc-green-footer .social-icon:hover {
+    color: rgba(0, 0, 0, 0.9) !important;
+    transform: scale(1.1) !important;
+}
+
+/* SCC Footer - Contact icons */
+body.scc-footer-green .footer .contact-info i,
+body.scc-footer-green .footer .contact-info i.fa-phone,
+body.scc-footer-green .footer .contact-info i.fa-envelope,
+.scc-footer-green .footer .contact-info i,
+.scc-footer-green .footer .contact-info i.fa-phone,
+.scc-footer-green .footer .contact-info i.fa-envelope {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .scc-logo-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .scc-logo-card {
+        position: relative;
+        top: 0;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .scc-vmg-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .scc-hero-section {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .scc-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .scc-hero-glass-card {
+        padding: 1.5rem 2rem;
+    }
+
+    .scc-section-title {
+        font-size: 2rem;
+    }
+
+    .scc-glass-card,
+    .scc-vmg-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .scc-accordion-header {
+        padding: 1.2rem 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .scc-accordion-content {
+        padding: 0 1.5rem;
+    }
+
+    .scc-accordion-item.active .scc-accordion-content {
+        padding: 0 1.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .scc-hero-section {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .scc-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .scc-intro-section,
+    .scc-logo-section,
+    .scc-vmg-section {
+        padding: 4rem 1rem;
+    }
+
+    .scc-section-title {
+        font-size: 1.6rem;
+    }
+}
+

@@ -1,0 +1,454 @@
+/* ============================================
+   ABOUT PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* ============================================
+   SECTION 1: ABOUT HERO SECTION
+   ============================================ */
+.about-hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.about-glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 22px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 40px rgba(123, 44, 191, 0.3);
+    transition: all 0.3s ease;
+}
+
+.about-glass-card:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3), 0 0 60px rgba(123, 44, 191, 0.5);
+    transform: translateY(-4px);
+}
+
+.about-content-wrapper {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-glow {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, #E0AAFF, #7B2CBF);
+    box-shadow: 0 0 40px rgba(224, 170, 255, 0.6);
+    animation: float-photo 3s ease-in-out infinite;
+}
+
+.about-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.about-photo-wrapper:hover .about-photo {
+    transform: rotate(3deg);
+}
+
+@keyframes float-photo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.about-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(36, 0, 70, 0.3);
+    line-height: 1.2;
+}
+
+.about-subtitle {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 8px rgba(36, 0, 70, 0.2);
+}
+
+.about-paragraph {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+.about-paragraph p {
+    margin-bottom: 1.5rem;
+}
+
+.about-signature {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.8rem;
+    color: rgba(224, 170, 255, 0.9);
+    text-align: right;
+    margin-top: 1rem;
+    text-shadow: 0 0 15px rgba(224, 170, 255, 0.5);
+}
+
+/* ============================================
+   SECTION 2: CAROUSEL SECTION
+   ============================================ */
+.carousel-section {
+    padding: 6rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.carousel-track {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    min-height: 400px;
+}
+
+.carousel-slide {
+    display: none;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.carousel-slide.active {
+    display: block;
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.carousel-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    border-radius: 25px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+}
+
+.carousel-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.carousel-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(36, 0, 70, 0.3);
+    transition: all 0.3s ease;
+}
+
+.carousel-content:hover .carousel-title {
+    text-shadow: 0 0 20px rgba(224, 170, 255, 0.6);
+}
+
+.carousel-description {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    opacity: 0;
+    animation: fade-in-delay 0.6s ease-out 0.2s forwards;
+}
+
+@keyframes fade-in-delay {
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    min-height: 300px;
+}
+
+.carousel-content:hover .carousel-image img {
+    transform: scale(1.05);
+}
+
+/* Carousel Navigation Arrows */
+.carousel-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #E0AAFF;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    animation: float-arrow 0.5s ease-in-out infinite;
+}
+
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #E0AAFF;
+    box-shadow: 0 0 25px rgba(224, 170, 255, 0.8);
+    transform: scale(1.1) rotate(5deg);
+}
+
+@keyframes float-arrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #E0AAFF;
+    border-color: #E0AAFF;
+    box-shadow: 0 0 15px rgba(224, 170, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(224, 170, 255, 0.6);
+    transform: scale(1.1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .about-content-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-photo-wrapper {
+        justify-self: center;
+    }
+
+    .carousel-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .carousel-image {
+        order: -1;
+    }
+}
+
+/* Carousel Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 1rem;
+    }
+
+    .carousel-wrapper {
+        gap: 0.5rem;
+    }
+
+    .carousel-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .carousel-text {
+        text-align: center;
+    }
+
+    .carousel-title {
+        font-size: 1.8rem;
+    }
+
+    .carousel-description {
+        font-size: 1rem;
+    }
+
+    .carousel-image {
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .carousel-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .carousel-indicators {
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .about-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-glass-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .carousel-content {
+        padding: 2rem 1.5rem;
+        min-height: auto;
+    }
+
+    .carousel-title {
+        font-size: 1.8rem;
+    }
+
+    .carousel-description {
+        font-size: 1rem;
+    }
+
+    .carousel-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .photo-glow {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-section {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-subtitle {
+        font-size: 1rem;
+    }
+
+    .carousel-wrapper {
+        gap: 1rem;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+

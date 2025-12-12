@@ -1,0 +1,428 @@
+/* ============================================
+   CV PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* ============================================
+   FLOATING PARTICLES FOR CV PAGE
+   ============================================ */
+.cv-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.cv-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(224, 170, 255, 0.1);
+    filter: blur(30px);
+    animation: float-cv-particle 20s infinite ease-in-out;
+}
+
+.cv-particle-1 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.cv-particle-2 {
+    width: 80px;
+    height: 80px;
+    top: 30%;
+    right: 15%;
+    animation-delay: -3s;
+}
+
+.cv-particle-3 {
+    width: 120px;
+    height: 120px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -6s;
+}
+
+.cv-particle-4 {
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    right: 30%;
+    animation-delay: -9s;
+}
+
+.cv-particle-5 {
+    width: 70px;
+    height: 70px;
+    bottom: 40%;
+    left: 50%;
+    animation-delay: -12s;
+}
+
+.cv-particle-6 {
+    width: 110px;
+    height: 110px;
+    top: 70%;
+    right: 10%;
+    animation-delay: -15s;
+}
+
+@keyframes float-cv-particle {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translate(50px, -50px) scale(1.2);
+        opacity: 0.15;
+    }
+}
+
+/* ============================================
+   SECTION 1: PROFILE INFORMATION
+   ============================================ */
+.cv-profile-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+}
+
+.cv-profile-container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.cv-main-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 2px 10px rgba(36, 0, 70, 0.3);
+    line-height: 1.2;
+}
+
+.cv-glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 24px;
+    padding: 3.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 40px rgba(123, 44, 191, 0.3);
+    transition: all 0.3s ease;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cv-glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3), 0 0 60px rgba(123, 44, 191, 0.5);
+}
+
+.cv-profile-content {
+    margin-bottom: 2.5rem;
+}
+
+.cv-profile-text {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.cv-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cv-view-button {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cv-view-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(224, 170, 255, 0.8);
+    box-shadow: 0 0 30px rgba(224, 170, 255, 0.6);
+    transform: translateY(-2px);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 30px rgba(224, 170, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(224, 170, 255, 0.9);
+    }
+}
+
+/* ============================================
+   SECTION 2: EDUCATION BACKGROUND
+   ============================================ */
+.cv-education-section {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cv-education-container {
+    position: relative;
+}
+
+.cv-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-shadow: 0 2px 10px rgba(36, 0, 70, 0.3);
+}
+
+.cv-timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(224, 170, 255, 0.4) 0%, rgba(123, 44, 191, 0.4) 100%);
+    box-shadow: 0 0 10px rgba(224, 170, 255, 0.3);
+    animation: expand-line 1.5s ease-out;
+}
+
+@keyframes expand-line {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+.cv-education-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 18px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.cv-education-card::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(224, 170, 255, 0.8);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(224, 170, 255, 0.6);
+}
+
+.cv-education-card:hover {
+    transform: translateX(10px) rotate(1deg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25), 0 0 25px rgba(224, 170, 255, 0.4);
+    border-color: rgba(224, 170, 255, 0.6);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.education-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-school {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(36, 0, 70, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.education-degree {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+/* Glass Divider */
+.glass-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    margin: 4rem auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(224, 170, 255, 0.3);
+}
+
+/* CV Signature */
+.cv-signature {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.signature-text {
+    font-family: 'Parisienne', cursive;
+    font-size: 2rem;
+    color: rgba(224, 170, 255, 0.9);
+    text-shadow: 0 0 20px rgba(224, 170, 255, 0.5);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.slide-in-top {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideInTop 0.7s ease-out forwards;
+}
+
+@keyframes slideInTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease-out;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .cv-main-title {
+        font-size: 2rem;
+    }
+
+    .cv-glass-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .cv-profile-text {
+        font-size: 1rem;
+    }
+
+    .cv-view-button {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
+    }
+
+    .cv-section-title {
+        font-size: 2rem;
+    }
+
+    .cv-timeline {
+        padding-left: 2rem;
+    }
+
+    .cv-education-card {
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cv-education-card::before {
+        left: -1.5rem;
+    }
+
+    .education-school {
+        font-size: 1.2rem;
+    }
+
+    .education-degree {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cv-profile-section {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .cv-main-title {
+        font-size: 1.6rem;
+    }
+
+    .cv-glass-card {
+        padding: 1.5rem;
+    }
+
+    .cv-education-section {
+        padding: 4rem 1rem;
+    }
+}
+

@@ -1,0 +1,12 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hadjaraGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B2CBF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0AAFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#hadjaraGrad)"/>
+  <circle cx="100" cy="80" r="35" fill="rgba(255,255,255,0.3)"/>
+  <path d="M 30 170 Q 30 150 100 150 T 170 170 L 170 200 L 30 200 Z" fill="rgba(255,255,255,0.3)"/>
+</svg>
+

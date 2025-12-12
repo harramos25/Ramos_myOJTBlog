@@ -1,0 +1,728 @@
+/* ============================================
+   NCIP PAGE SPECIFIC STYLES - YELLOW THEME
+   ============================================ */
+
+/* CRITICAL: Override CSS variables FIRST at body level */
+body.ncip-footer-yellow {
+    --purple-deep: #FFD166 !important;
+    --purple-medium: #FFED85 !important;
+    --purple-light: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Override body background for NCIP page */
+body.ncip-page,
+body.ncip-footer-yellow,
+.ncip-about-section {
+    background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%);
+    background-attachment: fixed;
+}
+
+/* NCIP Navbar - Yellow Theme */
+body.ncip-footer-yellow .navbar,
+.ncip-footer-yellow .navbar {
+    background: rgba(255, 209, 102, 0.3) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.ncip-footer-yellow .navbar-brand.logo,
+.ncip-footer-yellow .navbar-brand.logo {
+    color: rgba(0, 0, 0, 0.85) !important;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+body.ncip-footer-yellow .nav-link,
+.ncip-footer-yellow .nav-link {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.ncip-footer-yellow .nav-link:hover,
+body.ncip-footer-yellow .nav-link.active,
+.ncip-footer-yellow .nav-link:hover,
+.ncip-footer-yellow .nav-link.active {
+    color: rgba(0, 0, 0, 0.95) !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+body.ncip-footer-yellow .nav-link::after,
+.ncip-footer-yellow .nav-link::after {
+    background: rgba(255, 209, 102, 0.9);
+    box-shadow: 0 0 10px rgba(255, 209, 102, 0.6);
+}
+
+body.ncip-footer-yellow .navbar-toggler,
+.ncip-footer-yellow .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+body.ncip-footer-yellow .navbar-toggler:hover,
+.ncip-footer-yellow .navbar-toggler:hover {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px rgba(255, 209, 102, 0.5);
+    transform: scale(1.05);
+}
+
+body.ncip-footer-yellow .navbar-toggler:focus,
+.ncip-footer-yellow .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 209, 102, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(0, 0, 0, 0.8);
+}
+
+body.ncip-footer-yellow .navbar-toggler-icon,
+.ncip-footer-yellow .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body.ncip-footer-yellow .navbar-collapse,
+.ncip-footer-yellow .navbar-collapse {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* ============================================
+   GOLDEN PARTICLES
+   ============================================ */
+.ncip-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.ncip-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 209, 102, 0.15);
+    filter: blur(40px);
+    animation: float-ncip-particle 25s infinite ease-in-out;
+}
+
+.ncip-particle-1 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.ncip-particle-2 {
+    width: 120px;
+    height: 120px;
+    top: 30%;
+    right: 15%;
+    animation-delay: -4s;
+}
+
+.ncip-particle-3 {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -8s;
+}
+
+.ncip-particle-4 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 30%;
+    animation-delay: -12s;
+}
+
+.ncip-particle-5 {
+    width: 140px;
+    height: 140px;
+    bottom: 40%;
+    left: 50%;
+    animation-delay: -16s;
+}
+
+.ncip-particle-6 {
+    width: 130px;
+    height: 130px;
+    top: 70%;
+    right: 10%;
+    animation-delay: -20s;
+}
+
+@keyframes float-ncip-particle {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translate(60px, -60px) scale(1.2);
+        opacity: 0.25;
+    }
+}
+
+/* ============================================
+   SECTION 1: ABOUT NCIP XI
+   ============================================ */
+.ncip-about-section {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    position: relative;
+    background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%);
+    background-attachment: fixed;
+}
+
+.ncip-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logos Container */
+.ncip-logos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.ncip-logo-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 209, 102, 0.3);
+}
+
+.ncip-logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(255, 209, 102, 0.5);
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ncip-logo-img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.ncip-logo-card:hover .ncip-logo-img {
+    transform: scale(1.05);
+}
+
+.logo-label {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+/* Glass Card */
+.ncip-glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 209, 102, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ncip-glass-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(255, 209, 102, 0.4);
+}
+
+.ncip-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.ncip-description {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   NCIP CAROUSEL
+   ============================================ */
+.ncip-carousel-wrapper {
+    margin: 3rem 0;
+}
+
+.ncip-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ncip-carousel-track {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    height: 400px;
+}
+
+.ncip-carousel-slide {
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.ncip-carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 2;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.ncip-carousel-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.ncip-carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ncip-carousel-slide.active .ncip-carousel-image {
+    transform: scale(1.05);
+}
+
+/* Carousel Navigation Arrows */
+.ncip-carousel-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.ncip-carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 209, 102, 0.8);
+    box-shadow: 0 0 30px rgba(255, 209, 102, 0.6);
+    transform: scale(1.1);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+/* Carousel Indicators */
+.ncip-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ncip-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ncip-indicator.active {
+    background: rgba(255, 209, 102, 0.9);
+    border-color: rgba(255, 209, 102, 1);
+    box-shadow: 0 0 15px rgba(255, 209, 102, 0.8);
+    transform: scale(1.2);
+}
+
+.ncip-indicator:hover {
+    background: rgba(255, 209, 102, 0.7);
+    transform: scale(1.1);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpNCIP 0.8s ease-out forwards;
+}
+
+.fade-up-delay {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpNCIP 0.8s ease-out 0.2s forwards;
+}
+
+.fade-up-delay-2 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpNCIP 0.8s ease-out 0.4s forwards;
+}
+
+.fade-up-delay-3 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpNCIP 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes fadeUpNCIP {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .ncip-about-section {
+        padding: 6rem 1.5rem 3rem;
+    }
+
+    .ncip-logos-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ncip-glass-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .ncip-section-title {
+        font-size: 1.8rem;
+    }
+
+    .ncip-description {
+        font-size: 1rem;
+    }
+
+    .ncip-carousel-track {
+        height: 300px;
+    }
+
+    .ncip-carousel-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .ncip-carousel-container {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ncip-carousel-container {
+        gap: 0.5rem;
+    }
+
+    .ncip-carousel-track {
+        height: 250px;
+    }
+
+    .ncip-carousel-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .ncip-carousel-indicators {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ncip-about-section {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .ncip-section-title {
+        font-size: 1.5rem;
+    }
+
+    .ncip-glass-card {
+        padding: 1.5rem;
+    }
+
+    .ncip-carousel-track {
+        height: 250px;
+    }
+
+    .ncip-carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   NCIP FOOTER - YELLOW THEME
+   ============================================ */
+/* Force yellow background - override all purple with multiple selectors */
+.ncip-footer-yellow .footer,
+.ncip-about-section ~ .footer,
+body:has(.ncip-about-section) .footer,
+section.ncip-about-section + footer.footer {
+    background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%) !important;
+    background-color: #FFD166 !important;
+    border-top: 2px solid rgba(255, 255, 255, 0.3) !important;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Override CSS variables to remove purple */
+.ncip-footer-yellow .footer,
+.ncip-about-section ~ .footer,
+body:has(.ncip-about-section) .footer {
+    --purple-light: rgba(0, 0, 0, 0.8) !important;
+    --purple-deep: #FFD166 !important;
+    --purple-medium: #FFED85 !important;
+}
+
+.ncip-about-section ~ .footer.visible,
+body:has(.ncip-about-section) .footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer Title - Yellow Theme */
+.ncip-about-section ~ .footer .footer-title,
+body:has(.ncip-about-section) .footer .footer-title {
+    color: rgba(0, 0, 0, 0.85);
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Social Icons - Yellow Theme */
+.ncip-about-section ~ .footer .glass-circle,
+body:has(.ncip-about-section) .footer .glass-circle {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.ncip-about-section ~ .footer .glass-circle:hover,
+body:has(.ncip-about-section) .footer .glass-circle:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 209, 102, 0.9);
+    color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 30px rgba(255, 209, 102, 0.8);
+    transform: scale(1.15);
+}
+
+.ncip-about-section ~ .footer .social-icon,
+body:has(.ncip-about-section) .footer .social-icon {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.ncip-about-section ~ .footer .social-icon:hover,
+body:has(.ncip-about-section) .footer .social-icon:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+/* Footer Copyright - Yellow Theme */
+.ncip-about-section ~ .footer .footer-copyright,
+body:has(.ncip-about-section) .footer .footer-copyright {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Contact Info - Yellow Theme */
+.ncip-about-section ~ .footer .contact-info,
+body:has(.ncip-about-section) .footer .contact-info {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.ncip-about-section ~ .footer .contact-info strong,
+body:has(.ncip-about-section) .footer .contact-info strong {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.ncip-about-section ~ .footer .contact-info i,
+body:has(.ncip-about-section) .footer .contact-info i,
+.ncip-about-section ~ .footer .contact-info i.fa-phone,
+body:has(.ncip-about-section) .footer .contact-info i.fa-phone,
+.ncip-about-section ~ .footer .contact-info i.fa-envelope,
+body:has(.ncip-about-section) .footer .contact-info i.fa-envelope {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Alternative selector for browsers that don't support :has() - HIGHEST PRIORITY */
+body.ncip-footer-yellow footer.footer,
+body.ncip-footer-yellow footer.footer.visible,
+.ncip-footer-yellow footer.footer,
+.ncip-footer-yellow footer.footer.visible,
+body.ncip-footer-yellow .footer,
+body.ncip-footer-yellow .footer.visible,
+.ncip-footer-yellow .footer,
+.ncip-footer-yellow .footer.visible {
+    background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%) !important;
+    background-color: #FFD166 !important;
+    background-image: none !important;
+    border-top: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Force override even if CSS variable is used */
+body.ncip-footer-yellow footer.footer[style*="background"],
+body.ncip-footer-yellow .footer[style*="background"] {
+    background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%) !important;
+    background-color: #FFD166 !important;
+}
+
+/* Override CSS variables at body level */
+body.ncip-footer-yellow {
+    --purple-deep: #FFD166 !important;
+    --purple-medium: #FFED85 !important;
+    --purple-light: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.ncip-footer-yellow .footer {
+    --purple-deep: #FFD166 !important;
+    --purple-medium: #FFED85 !important;
+    --purple-light: rgba(0, 0, 0, 0.8) !important;
+}
+
+.ncip-footer-yellow .footer .footer-title {
+    color: rgba(0, 0, 0, 0.85) !important;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+.ncip-footer-yellow .footer .glass-circle {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.ncip-footer-yellow .footer .glass-circle:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 209, 102, 0.9) !important;
+    box-shadow: 0 0 30px rgba(255, 209, 102, 0.8) !important;
+}
+
+.ncip-footer-yellow .footer .social-icon {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.ncip-footer-yellow .footer .social-icon:hover {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.ncip-footer-yellow .footer .footer-copyright {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.ncip-footer-yellow .footer .contact-info {
+    color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.ncip-footer-yellow .footer .contact-info strong {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.ncip-footer-yellow .footer .contact-info i,
+.ncip-footer-yellow .footer .contact-info i.fa-phone,
+.ncip-footer-yellow .footer .contact-info i.fa-envelope {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Override any purple variables in footer - FORCE YELLOW */
+body.ncip-footer-yellow .footer,
+body.ncip-footer-yellow .footer.visible,
+.ncip-footer-yellow .footer,
+.ncip-footer-yellow .footer.visible {
+    --purple-light: rgba(0, 0, 0, 0.8) !important;
+    --purple-deep: #FFD166 !important;
+    --purple-medium: #FFED85 !important;
+    background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%) !important;
+    background-color: #FFD166 !important;
+}
+
+body.ncip-footer-yellow .footer *,
+.ncip-footer-yellow .footer * {
+    --purple-light: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ============================================
+   FINAL OVERRIDE - FORCE YELLOW FOOTER
+   ============================================ */
+/* Hide purple background animation on NCIP page */
+body.ncip-footer-yellow .background-animation,
+body.ncip-footer-yellow .background-animation * {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* ABSOLUTE FINAL OVERRIDE - Maximum specificity */
+html body.ncip-footer-yellow footer.footer,
+html body.ncip-footer-yellow footer.footer.visible,
+html body.ncip-footer-yellow .footer,
+html body.ncip-footer-yellow .footer.visible,
+html body.ncip-footer-yellow footer.ncip-yellow-footer,
+html body.ncip-footer-yellow footer.ncip-yellow-footer.visible {
+    background: #FFD166 !important;
+    background-color: #FFD166 !important;
+    background-image: linear-gradient(135deg, #FFD166 0%, #FFED85 100%) !important;
+    --purple-deep: #FFD166 !important;
+    --purple-medium: #FFED85 !important;
+    --purple-light: rgba(0, 0, 0, 0.8) !important;
+}
+

@@ -1,0 +1,452 @@
+/* ============================================
+   CHED PAGE SPECIFIC STYLES - BLUE THEME
+   ============================================ */
+
+/* Override body background for CHED page */
+body.ched-footer-blue,
+.ched-hero-section,
+.ched-about-section {
+    background: linear-gradient(135deg, #2196F3 0%, #64B5F6 100%);
+    background-attachment: fixed;
+}
+
+/* ============================================
+   BLUE PARTICLES
+   ============================================ */
+.ched-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.ched-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(33, 150, 243, 0.15);
+    filter: blur(40px);
+    animation: float-ched-particle 25s infinite ease-in-out;
+}
+
+.ched-particle-1 {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.ched-particle-2 {
+    width: 120px;
+    height: 120px;
+    top: 30%;
+    right: 15%;
+    animation-delay: -4s;
+}
+
+.ched-particle-3 {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -8s;
+}
+
+.ched-particle-4 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    right: 30%;
+    animation-delay: -12s;
+}
+
+.ched-particle-5 {
+    width: 140px;
+    height: 140px;
+    bottom: 40%;
+    left: 50%;
+    animation-delay: -16s;
+}
+
+.ched-particle-6 {
+    width: 130px;
+    height: 130px;
+    top: 70%;
+    right: 10%;
+    animation-delay: -20s;
+}
+
+@keyframes float-ched-particle {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translate(60px, -60px) scale(1.2);
+        opacity: 0.25;
+    }
+}
+
+/* ============================================
+   SECTION 1: HERO SECTION
+   ============================================ */
+.ched-hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.ched-hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ched-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    animation: fadeInScale 1s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+.ched-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(33, 150, 243, 0.7) 0%, transparent 100%);
+}
+
+.ched-hero-glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 30px rgba(33, 150, 243, 0.3);
+    animation: slideUpFromBottom 0.8s ease-out 0.3s both;
+}
+
+@keyframes slideUpFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ched-hero-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+/* ============================================
+   SECTION 2: ABOUT CHED SECTION
+   ============================================ */
+.ched-about-section {
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.ched-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.ched-about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+    align-items: start;
+}
+
+.ched-about-content {
+    flex: 1;
+}
+
+.ched-glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 30px rgba(33, 150, 243, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ched-glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(33, 150, 243, 0.4);
+}
+
+.ched-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+.ched-description {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.ched-description:last-child {
+    margin-bottom: 0;
+}
+
+.ched-logo-wrapper {
+    position: sticky;
+    top: 100px;
+}
+
+.ched-logo-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 30px rgba(33, 150, 243, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ched-logo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2), 0 0 40px rgba(33, 150, 243, 0.5);
+}
+
+.ched-logo-img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpCHED 0.8s ease-out forwards;
+}
+
+.fade-up-delay {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpCHED 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes fadeUpCHED {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   CHED FOOTER - BLUE THEME
+   ============================================ */
+body.ched-footer-blue .footer,
+body.ched-footer-blue .footer.visible,
+.ched-footer-blue .footer,
+.ched-footer-blue .footer.visible,
+footer.ched-blue-footer,
+footer.ched-blue-footer.visible {
+    background: linear-gradient(135deg, #2196F3 0%, #64B5F6 100%) !important;
+    background-color: #2196F3 !important;
+    background-image: none !important;
+    --purple-deep: #2196F3 !important;
+    --purple-medium: #64B5F6 !important;
+    border-top: 2px solid rgba(255, 255, 255, 0.3) !important;
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+/* Hide purple background animation on CHED page */
+body.ched-footer-blue .background-animation {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* CHED Footer - Override all text colors */
+body.ched-footer-blue .footer .footer-title,
+.ched-footer-blue .footer .footer-title {
+    color: rgba(0, 0, 0, 0.85) !important;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+body.ched-footer-blue .footer .footer-copyright,
+.ched-footer-blue .footer .footer-copyright {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+body.ched-footer-blue .footer .contact-info,
+.ched-footer-blue .footer .contact-info {
+    color: rgba(0, 0, 0, 0.85) !important;
+}
+
+body.ched-footer-blue .footer .contact-info strong,
+.ched-footer-blue .footer .contact-info strong {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* CHED Footer - Social icons with blue glow */
+body.ched-footer-blue .footer .glass-circle,
+.ched-footer-blue .footer .glass-circle,
+footer.ched-blue-footer .glass-circle {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+}
+
+body.ched-footer-blue .footer .glass-circle:hover,
+.ched-footer-blue .footer .glass-circle:hover,
+footer.ched-blue-footer .glass-circle:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(33, 150, 243, 0.9) !important;
+    box-shadow: 0 0 30px rgba(33, 150, 243, 0.8), 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+    transform: scale(1.15) translateY(-2px) !important;
+}
+
+body.ched-footer-blue .footer .social-icon,
+.ched-footer-blue .footer .social-icon,
+footer.ched-blue-footer .social-icon {
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-size: 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+body.ched-footer-blue .footer .social-icon:hover,
+.ched-footer-blue .footer .social-icon:hover,
+footer.ched-blue-footer .social-icon:hover {
+    color: rgba(0, 0, 0, 0.9) !important;
+    transform: scale(1.1) !important;
+}
+
+/* CHED Footer - Contact icons */
+body.ched-footer-blue .footer .contact-info i,
+body.ched-footer-blue .footer .contact-info i.fa-phone,
+body.ched-footer-blue .footer .contact-info i.fa-envelope,
+.ched-footer-blue .footer .contact-info i,
+.ched-footer-blue .footer .contact-info i.fa-phone,
+.ched-footer-blue .footer .contact-info i.fa-envelope {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .ched-about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .ched-logo-wrapper {
+        position: relative;
+        top: 0;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .ched-hero-section {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .ched-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .ched-hero-glass-card {
+        padding: 1.5rem 2rem;
+    }
+
+    .ched-section-title {
+        font-size: 2rem;
+    }
+
+    .ched-glass-card,
+    .ched-logo-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .ched-about-section {
+        padding: 4rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ched-hero-section {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .ched-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .ched-about-section {
+        padding: 4rem 1rem;
+    }
+
+    .ched-section-title {
+        font-size: 1.6rem;
+    }
+}
+
