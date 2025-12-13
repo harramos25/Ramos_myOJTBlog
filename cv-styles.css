@@ -363,7 +363,91 @@
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+/* Center logo when navbar-toggler is visible (Bootstrap lg breakpoint) */
+@media (max-width: 991.98px) {
+    .logo,
+    .navbar-brand.logo {
+        position: absolute;
+        left: 50%;
+        top: 6px;
+        transform: translateX(-50%);
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: clamp(0.5rem, 1.5vw, 1.2rem) !important;
+        margin: 0;
+        z-index: 10;
+    }
+
+    /* Center logo when scrolled on smaller screens */
+    .navbar.scrolled .logo,
+    .navbar.scrolled .navbar-brand.logo {
+        position: absolute;
+        left: 50% !important;
+        top: 6px !important;
+        transform: translateX(-50%) !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: clamp(0.5rem, 1.5vw, 1.2rem) !important;
+        margin: 0 !important;
+        z-index: 10;
+        align-self: flex-start;
+        font-size: clamp(0.8rem, 2.2vw, 22px) !important;
+        white-space: nowrap;
+    }
+}
+
 @media (max-width: 768px) {
+    .logo,
+    .navbar-brand.logo {
+        font-size: 0.95rem;
+        padding-top: 0.75rem !important;
+        line-height: 1.2;
+    }
+
+    .navbar.scrolled .logo,
+    .navbar.scrolled .navbar-brand.logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 6px !important;
+        transform: translateX(-50%) !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 0.5rem !important;
+        margin: 0 !important;
+        z-index: 10;
+        align-self: flex-start;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        right: auto !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    /* Ensure logo stays centered regardless of collapse state */
+    .navbar.scrolled .navbar-collapse.show,
+    .navbar.scrolled .navbar-collapse:not(.show) {
+        position: relative;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+
     .cv-main-title {
         font-size: 2rem;
     }
@@ -409,6 +493,40 @@
 }
 
 @media (max-width: 480px) {
+    .logo,
+    .navbar-brand.logo {
+        font-size: 0.9rem;
+        padding-top: 1rem !important;
+        line-height: 1.2;
+    }
+
+    .navbar.scrolled .logo,
+    .navbar.scrolled .navbar-brand.logo {
+        font-size: 0.85rem;
+        padding-top: 0.8rem !important;
+        line-height: 1.2;
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+
     .cv-profile-section {
         padding: 6rem 1rem 3rem;
     }

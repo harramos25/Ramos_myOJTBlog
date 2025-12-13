@@ -30,8 +30,8 @@ body.research-footer-red .navbar-brand.logo,
     color: rgba(255, 255, 255, 0.95) !important;
     text-shadow: 0 2px 8px rgba(255, 107, 107, 0.5);
     position: absolute;
-    left: 180px;
-    top: 6px;
+    left: 36px;
+    top: -1px;
     z-index: 10;
     font-size: clamp(0.85rem, 2.5vw, 24px) !important;
     padding-top: clamp(0.8rem, 2vw, 1.4rem) !important;
@@ -114,8 +114,8 @@ body.research-footer-red .navbar.scrolled .navbar-brand.logo,
 .research-footer-red .navbar.scrolled .logo,
 .research-footer-red .navbar.scrolled .navbar-brand.logo {
     position: absolute;
-    left: 180px;
-    top: 6px;
+    left: 36px;
+    top: -1px;
     z-index: 10;
     align-self: flex-start;
     font-size: clamp(0.8rem, 2.2vw, 22px) !important;
@@ -831,6 +831,35 @@ body.research-footer-red .footer .contact-info i,
         font-size: 0.9rem;
         line-height: 1.2;
         right: auto !important;
+    }
+
+    body.research-footer-red .navbar-collapse,
+    .research-footer-red .navbar-collapse {
+        background: rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+        position: relative;
+    }
+
+    /* Ensure logo stays centered regardless of collapse state */
+    body.research-footer-red .navbar.scrolled .navbar-collapse.show,
+    body.research-footer-red .navbar.scrolled .navbar-collapse:not(.show),
+    .research-footer-red .navbar.scrolled .navbar-collapse.show,
+    .research-footer-red .navbar.scrolled .navbar-collapse:not(.show) {
+        position: relative;
+    }
+
+    body.research-footer-red .nav-menu,
+    body.research-footer-red .navbar-nav,
+    .research-footer-red .nav-menu,
+    .research-footer-red .navbar-nav {
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        flex-direction: column;
     }
 
     .research-main-title {

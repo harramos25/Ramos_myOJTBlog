@@ -29,6 +29,16 @@ body.ncip-footer-yellow .navbar-brand.logo,
 .ncip-footer-yellow .navbar-brand.logo {
     color: rgba(0, 0, 0, 0.85) !important;
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 36px;
+    top: -1px;
+    z-index: 10;
+    font-size: clamp(0.85rem, 2.5vw, 24px) !important;
+    padding-top: clamp(0.8rem, 2vw, 1.4rem) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    white-space: nowrap;
+    line-height: 1.4;
 }
 
 body.ncip-footer-yellow .nav-link,
@@ -442,7 +452,7 @@ body.ncip-footer-yellow .navbar-collapse,
     .ncip-footer-yellow .navbar-brand.logo {
         position: absolute;
         left: 50%;
-        top: 0;
+        top: 6px;
         transform: translateX(-50%);
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -450,9 +460,85 @@ body.ncip-footer-yellow .navbar-collapse,
         margin: 0;
         z-index: 10;
     }
+
+    /* Center logo when scrolled on smaller screens */
+    body.ncip-footer-yellow .navbar.scrolled .logo,
+    body.ncip-footer-yellow .navbar.scrolled .navbar-brand.logo,
+    .ncip-footer-yellow .navbar.scrolled .logo,
+    .ncip-footer-yellow .navbar.scrolled .navbar-brand.logo {
+        position: absolute;
+        left: 50% !important;
+        top: 6px !important;
+        transform: translateX(-50%) !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: clamp(0.5rem, 1.5vw, 1.2rem) !important;
+        margin: 0 !important;
+        z-index: 10;
+        align-self: flex-start;
+        font-size: clamp(0.8rem, 2.2vw, 22px) !important;
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 768px) {
+    body.ncip-footer-yellow .logo,
+    body.ncip-footer-yellow .navbar-brand.logo,
+    .ncip-footer-yellow .logo,
+    .ncip-footer-yellow .navbar-brand.logo {
+        font-size: 0.95rem;
+        padding-top: 0.75rem !important;
+        line-height: 1.2;
+    }
+
+    body.ncip-footer-yellow .navbar.scrolled .logo,
+    body.ncip-footer-yellow .navbar.scrolled .navbar-brand.logo,
+    .ncip-footer-yellow .navbar.scrolled .logo,
+    .ncip-footer-yellow .navbar.scrolled .navbar-brand.logo {
+        position: absolute !important;
+        left: 50% !important;
+        top: 6px !important;
+        transform: translateX(-50%) !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 0.5rem !important;
+        margin: 0 !important;
+        z-index: 10;
+        align-self: flex-start;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        right: auto !important;
+    }
+
+    body.ncip-footer-yellow .navbar-collapse,
+    .ncip-footer-yellow .navbar-collapse {
+        background: rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+        position: relative;
+    }
+
+    /* Ensure logo stays centered regardless of collapse state */
+    body.ncip-footer-yellow .navbar.scrolled .navbar-collapse.show,
+    body.ncip-footer-yellow .navbar.scrolled .navbar-collapse:not(.show),
+    .ncip-footer-yellow .navbar.scrolled .navbar-collapse.show,
+    .ncip-footer-yellow .navbar.scrolled .navbar-collapse:not(.show) {
+        position: relative;
+    }
+
+    body.ncip-footer-yellow .nav-menu,
+    body.ncip-footer-yellow .navbar-nav,
+    .ncip-footer-yellow .nav-menu,
+    .ncip-footer-yellow .navbar-nav {
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        flex-direction: column;
+    }
+
     .ncip-about-section {
         padding: 6rem 1.5rem 3rem;
     }
@@ -490,6 +576,44 @@ body.ncip-footer-yellow .navbar-collapse,
 }
 
 @media (max-width: 480px) {
+    body.ncip-footer-yellow .logo,
+    body.ncip-footer-yellow .navbar-brand.logo,
+    .ncip-footer-yellow .logo,
+    .ncip-footer-yellow .navbar-brand.logo {
+        font-size: 0.9rem;
+        padding-top: 1rem !important;
+        line-height: 1.2;
+    }
+
+    body.ncip-footer-yellow .navbar.scrolled .logo,
+    body.ncip-footer-yellow .navbar.scrolled .navbar-brand.logo,
+    .ncip-footer-yellow .navbar.scrolled .logo,
+    .ncip-footer-yellow .navbar.scrolled .navbar-brand.logo {
+        font-size: 0.85rem;
+        padding-top: 0.8rem !important;
+        line-height: 1.2;
+    }
+
+    body.ncip-footer-yellow .navbar-collapse,
+    .ncip-footer-yellow .navbar-collapse {
+        background: rgba(255, 255, 255, 0.15) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    body.ncip-footer-yellow .nav-menu,
+    body.ncip-footer-yellow .navbar-nav,
+    .ncip-footer-yellow .nav-menu,
+    .ncip-footer-yellow .navbar-nav {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        flex-direction: column;
+    }
+
     .ncip-carousel-container {
         gap: 0.5rem;
     }

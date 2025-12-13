@@ -404,6 +404,33 @@
 }
 
 @media (max-width: 768px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    /* Ensure logo stays centered regardless of collapse state */
+    .navbar.scrolled .navbar-collapse.show,
+    .navbar.scrolled .navbar-collapse:not(.show) {
+        position: relative;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+
     .about-title {
         font-size: 2.2rem;
     }
@@ -427,6 +454,26 @@
 }
 
 @media (max-width: 480px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+
     .about-hero-section {
         padding: 6rem 1rem 3rem;
     }
