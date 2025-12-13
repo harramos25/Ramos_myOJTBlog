@@ -2,6 +2,13 @@
    SCC PAGE SPECIFIC STYLES - GREEN THEME
    ============================================ */
 
+/* CRITICAL: Override CSS variables FIRST at body level */
+body.scc-footer-green {
+    --purple-deep: #4CAF50 !important;
+    --purple-medium: #A5D6A7 !important;
+    --purple-light: rgba(255, 255, 255, 0.9) !important;
+}
+
 /* Override body background for SCC page */
 body.scc-footer-green,
 .scc-hero-section,
@@ -10,6 +17,67 @@ body.scc-footer-green,
 .scc-vmg-section {
     background: linear-gradient(135deg, #4CAF50 0%, #A5D6A7 100%);
     background-attachment: fixed;
+}
+
+/* SCC Navbar - Green Theme */
+body.scc-footer-green .navbar,
+.scc-footer-green .navbar {
+    background: rgba(76, 175, 80, 0.3) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+body.scc-footer-green .navbar.scrolled,
+.scc-footer-green .navbar.scrolled {
+    background: rgba(76, 175, 80, 0.5) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.scc-footer-green .navbar-brand.logo,
+.scc-footer-green .navbar-brand.logo {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 8px rgba(76, 175, 80, 0.5);
+}
+
+body.scc-footer-green .nav-link,
+.scc-footer-green .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.scc-footer-green .nav-link:hover,
+body.scc-footer-green .nav-link.active,
+.scc-footer-green .nav-link:hover,
+.scc-footer-green .nav-link.active {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+
+body.scc-footer-green .nav-link::after,
+.scc-footer-green .nav-link::after {
+    background: rgba(76, 175, 80, 0.9);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+}
+
+body.scc-footer-green .navbar-toggler,
+.scc-footer-green .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+body.scc-footer-green .navbar-toggler:hover,
+.scc-footer-green .navbar-toggler:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+    transform: scale(1.05);
+}
+
+body.scc-footer-green .navbar-toggler:focus,
+.scc-footer-green .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.4);
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.9);
 }
 
 /* ============================================
@@ -638,6 +706,24 @@ body.scc-footer-green .footer .contact-info i.fa-envelope,
 
     .scc-vmg-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Center logo when navbar-toggler is visible (Bootstrap lg breakpoint) */
+@media (max-width: 991.98px) {
+    body.scc-footer-green .logo,
+    body.scc-footer-green .navbar-brand.logo,
+    .scc-footer-green .logo,
+    .scc-footer-green .navbar-brand.logo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: clamp(0.5rem, 1.5vw, 1.2rem) !important;
+        margin: 0;
+        z-index: 10;
     }
 }
 

@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('active');
             } else if (currentPage === 'index.html' && href === 'index.html') {
                 link.classList.add('active');
+            } else if (currentPage === 'research.html' && href === 'research.html') {
+                link.classList.add('active');
             }
         });
     }

@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 (currentPage === 'index.html' && (href === '#home' || href === 'index.html' || href === '')) ||
                 (currentPage === 'about.html' && href === 'about.html') ||
                 (currentPage === 'cv.html' && href === 'cv.html') ||
+                (currentPage === 'research.html' && href === 'research.html') ||
                 (currentPage === 'ncip.html' && href === 'ncip.html') ||
                 (currentPage === 'scc.html' && href === 'scc.html') ||
                 (currentPage === 'ched.html' && href === 'ched.html') ||

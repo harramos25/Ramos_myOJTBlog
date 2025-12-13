@@ -433,6 +433,25 @@ body.ncip-footer-yellow .navbar-collapse,
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+
+/* Center logo when navbar-toggler is visible (Bootstrap lg breakpoint) */
+@media (max-width: 991.98px) {
+    body.ncip-footer-yellow .logo,
+    body.ncip-footer-yellow .navbar-brand.logo,
+    .ncip-footer-yellow .logo,
+    .ncip-footer-yellow .navbar-brand.logo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: clamp(0.5rem, 1.5vw, 1.2rem) !important;
+        margin: 0;
+        z-index: 10;
+    }
+}
+
 @media (max-width: 768px) {
     .ncip-about-section {
         padding: 6rem 1.5rem 3rem;
