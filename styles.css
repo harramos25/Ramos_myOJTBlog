@@ -161,7 +161,7 @@ body {
 .navbar-brand.logo {
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: clamp(0.85rem, 2.5vw, 24px);
+    font-size: 20px;
     color: #FFFFFF !important;
     text-shadow: 0 0 20px rgba(224, 170, 255, 0.5);
     text-decoration: none;
@@ -174,7 +174,7 @@ body {
     border: none !important;
     backdrop-filter: none;
     position: absolute;
-    left: 36px;
+    left: 15px;
     top: -1px;
     z-index: 10;
     padding-top: clamp(0.8rem, 2vw, 1.4rem) !important;
