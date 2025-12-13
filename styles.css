@@ -134,6 +134,15 @@ body {
     position: relative;
 }
 
+/* Ensure navbar-collapse doesn't affect logo positioning */
+.navbar.scrolled .nav-container {
+    position: relative;
+}
+
+.navbar.scrolled .navbar-collapse {
+    position: relative;
+}
+
 /* Keep logo in place when navbar is scrolled (larger screens) */
 .navbar.scrolled .logo,
 .navbar.scrolled .navbar-brand.logo {
@@ -162,8 +171,8 @@ body {
     border: none !important;
     backdrop-filter: none;
     position: absolute;
-    left: 36px;
-    top: -5px;
+    left: 180px;
+    top: 6px;
     z-index: 10;
     padding-top: clamp(0.8rem, 2vw, 1.4rem) !important;
     padding-left: 0 !important;
@@ -208,11 +217,15 @@ body {
 }
 
 .navbar-toggler {
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.8);
     padding: 0.5rem 0.75rem;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    position: relative;
+    top: 0px;
+    box-shadow: 0 0 15px rgba(224, 170, 255, 0.5);
+    transform: scale(1.05);
 }
 
 .navbar-toggler:hover {
@@ -229,7 +242,8 @@ body {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    opacity: 0.9;
 }
 
 .nav-link {
@@ -1267,7 +1281,7 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
     .navbar-brand.logo {
         position: absolute;
         left: 50%;
-        top: 0;
+        top: 6px;
         transform: translateX(-50%);
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -1280,17 +1294,18 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
     .navbar.scrolled .logo,
     .navbar.scrolled .navbar-brand.logo {
         position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
+        left: 50% !important;
+        top: 6px !important;
+        transform: translateX(-50%) !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
         padding-top: clamp(0.5rem, 1.5vw, 1.2rem) !important;
-        margin: 0;
+        margin: 0 !important;
         z-index: 10;
         align-self: flex-start;
         font-size: clamp(0.8rem, 2.2vw, 22px);
         white-space: nowrap;
+        right: auto !important;
     }
 }
 
@@ -1311,18 +1326,19 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
 
     .navbar.scrolled .logo,
     .navbar.scrolled .navbar-brand.logo {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
+        position: absolute !important;
+        left: 50% !important;
+        top: 6px !important;
+        transform: translateX(-50%) !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
         padding-top: 0.5rem !important;
-        margin: 0;
+        margin: 0 !important;
         z-index: 10;
         align-self: flex-start;
         font-size: 0.9rem;
         line-height: 1.2;
+        right: auto !important;
     }
 
     .navbar-collapse {
@@ -1333,6 +1349,13 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
         padding: 1rem;
         border: 1px solid rgba(255, 255, 255, 0.3);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    /* Ensure logo stays centered regardless of collapse state */
+    .navbar.scrolled .navbar-collapse.show,
+    .navbar.scrolled .navbar-collapse:not(.show) {
+        position: relative;
     }
 
     .nav-menu {
@@ -1421,18 +1444,19 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
 
     .navbar.scrolled .logo,
     .navbar.scrolled .navbar-brand.logo {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
+        position: absolute !important;
+        left: 50% !important;
+        top: 6px !important;
+        transform: translateX(-50%) !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
         padding-top: 0.8rem !important;
-        margin: 0;
+        margin: 0 !important;
         z-index: 10;
         font-size: 0.85rem;
         line-height: 1.2;
         align-self: flex-start;
+        right: auto !important;
     }
 
     .logo,
