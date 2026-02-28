@@ -7,6 +7,10 @@
     --purple-medium: #7B2CBF;
     --purple-light: #E0AAFF;
     --white: #FFFFFF;
+
+    /* Navbar Theme */
+    --nav-accent: #E0AAFF;
+    --nav-glow: rgba(224, 170, 255, 0.6);
 }
 
 * {
@@ -247,9 +251,9 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--purple-light);
+    background: var(--nav-accent);
     transition: width 0.3s ease;
-    box-shadow: 0 0 15px var(--purple-light);
+    box-shadow: 0 0 15px var(--nav-accent);
 }
 
 .nav-link:hover {

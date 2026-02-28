@@ -193,9 +193,7 @@ body.ched-footer-blue .navbar.scrolled,
 }
 
 /* CHED Navbar Links */
-.navbar body.ched-footer-blue .nav-link,
-.navbar .ched-footer-blue .nav-link,
-.navbar.ched-footer-blue .nav-link {
+body.ched-footer-blue .navbar .nav-link {
     font-family: 'Poppins', sans-serif;
     color: rgba(255, 255, 255, 0.95) !important;
     text-decoration: none;
@@ -212,7 +210,7 @@ body.ched-footer-blue .nav-link:hover,
 .ched-footer-blue .nav-link:hover {
     color: #FFFFFF !important;
     transform: translateY(-2px) scale(1.05);
-    text-shadow: 0 0 20px rgba(144, 202, 249, 0.6);
+    text-shadow: 0 0 20px var(--nav-glow);
 }
 
 body.ched-footer-blue .nav-link::after,

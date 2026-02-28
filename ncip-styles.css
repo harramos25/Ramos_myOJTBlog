@@ -41,9 +41,7 @@ body.ncip-footer-yellow .navbar-brand.logo,
     line-height: 1.4;
 }
 
-.navbar body.ncip-footer-yellow .nav-link,
-.navbar .ncip-footer-yellow .nav-link,
-.navbar.ncip-footer-yellow .nav-link {
+body.ncip-footer-yellow .navbar .nav-link {
     font-family: 'Poppins', sans-serif;
     color: rgba(0, 0, 0, 0.95) !important;
     text-decoration: none;
@@ -60,7 +58,7 @@ body.ncip-footer-yellow .nav-link:hover,
 .ncip-footer-yellow .nav-link:hover {
     color: #000000 !important;
     transform: translateY(-2px) scale(1.05);
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 15px var(--nav-glow);
 }
 
 body.ncip-footer-yellow .nav-link::after,
@@ -235,6 +233,14 @@ body.ncip-footer-yellow .navbar-collapse,
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    --text-dark: #2a2a2a;
+
+    /* Navbar Theme */
+    --nav-accent: #000000;
+    --nav-accent-alpha-95: rgba(0, 0, 0, 0.95);
+    --nav-accent-alpha-80: rgba(0, 0, 0, 0.8);
+    --nav-accent-alpha-40: rgba(0, 0, 0, 0.4);
+    --nav-glow: rgba(255, 255, 255, 0.6);
 }
 
 /* Logos Container */

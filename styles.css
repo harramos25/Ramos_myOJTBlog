@@ -19,6 +19,10 @@
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.4);
     --glass-shadow: rgba(0, 0, 0, 0.2);
+
+    /* Navbar Accents */
+    --nav-accent: #E0AAFF;
+    --nav-glow: rgba(224, 170, 255, 0.6);
 }
 
 html {
@@ -279,15 +283,15 @@ span.navbar-toggler-icon {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--hover-color);
+    background: var(--nav-accent);
     transition: width 0.3s ease;
-    box-shadow: 0 0 15px var(--hover-color);
+    box-shadow: 0 0 15px var(--nav-accent);
 }
 
 .navbar .nav-link:hover {
     color: #FFFFFF !important;
     transform: translateY(-2px) scale(1.05);
-    text-shadow: 0 0 20px rgba(224, 170, 255, 0.6);
+    text-shadow: 0 0 20px var(--nav-glow);
 }
 
 .nav-link:hover::after,
@@ -299,7 +303,7 @@ span.navbar-toggler-icon {
 .navbar .nav-link.active {
     position: relative;
     color: #FFFFFF !important;
-    text-shadow: 0 0 15px var(--hover-color) !important;
+    text-shadow: 0 0 15px var(--nav-accent) !important;
     transform: translateY(-2px);
 }
 
@@ -313,7 +317,7 @@ span.navbar-toggler-icon {
 /* Ensure active state persists even when navbar is scrolled */
 .navbar.scrolled .nav-link.active {
     color: #FFFFFF !important;
-    text-shadow: 0 0 15px var(--hover-color) !important;
+    text-shadow: 0 0 15px var(--nav-accent) !important;
 }
 
 .navbar.scrolled .nav-link.active::after {

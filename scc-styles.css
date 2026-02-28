@@ -49,9 +49,7 @@ body.scc-footer-green .navbar-brand.logo,
     line-height: 1.4;
 }
 
-.navbar body.scc-footer-green .nav-link,
-.navbar .scc-footer-green .nav-link,
-.navbar.scc-footer-green .nav-link {
+body.scc-footer-green .navbar .nav-link {
     font-family: 'Poppins', sans-serif;
     color: rgba(255, 255, 255, 0.95) !important;
     text-decoration: none;
@@ -68,7 +66,7 @@ body.scc-footer-green .nav-link:hover,
 .scc-footer-green .nav-link:hover {
     color: #FFFFFF !important;
     transform: translateY(-2px) scale(1.05);
-    text-shadow: 0 0 20px rgba(165, 214, 167, 0.6);
+    text-shadow: 0 0 20px var(--nav-glow);
 }
 
 body.scc-footer-green .nav-link::after,
