@@ -193,8 +193,9 @@ body.ched-footer-blue .navbar.scrolled,
 }
 
 /* CHED Navbar Links */
-body.ched-footer-blue .nav-link,
-.ched-footer-blue .nav-link {
+.navbar body.ched-footer-blue .nav-link,
+.navbar .ched-footer-blue .nav-link,
+.navbar.ched-footer-blue .nav-link {
     font-family: 'Poppins', sans-serif;
     color: rgba(255, 255, 255, 0.95) !important;
     text-decoration: none;

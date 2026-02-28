@@ -49,8 +49,9 @@ body.scc-footer-green .navbar-brand.logo,
     line-height: 1.4;
 }
 
-body.scc-footer-green .nav-link,
-.scc-footer-green .nav-link {
+.navbar body.scc-footer-green .nav-link,
+.navbar .scc-footer-green .nav-link,
+.navbar.scc-footer-green .nav-link {
     font-family: 'Poppins', sans-serif;
     color: rgba(255, 255, 255, 0.95) !important;
     text-decoration: none;

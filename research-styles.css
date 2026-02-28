@@ -70,8 +70,9 @@ body.research-footer-red .navbar,
     position: relative;
 }
 
-body.research-footer-red .nav-link,
-.research-footer-red .nav-link {
+.navbar body.research-footer-red .nav-link,
+.navbar .research-footer-red .nav-link,
+.navbar.research-footer-red .nav-link {
     font-family: 'Poppins', sans-serif;
     color: rgba(218, 193, 177, 0.95) !important;
     text-decoration: none;

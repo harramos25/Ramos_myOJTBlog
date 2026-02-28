@@ -41,8 +41,9 @@ body.ncip-footer-yellow .navbar-brand.logo,
     line-height: 1.4;
 }
 
-body.ncip-footer-yellow .nav-link,
-.ncip-footer-yellow .nav-link {
+.navbar body.ncip-footer-yellow .nav-link,
+.navbar .ncip-footer-yellow .nav-link,
+.navbar.ncip-footer-yellow .nav-link {
     font-family: 'Poppins', sans-serif;
     color: rgba(0, 0, 0, 0.95) !important;
     text-decoration: none;
