@@ -52,7 +52,7 @@ body.scc-footer-green .navbar-brand.logo,
 body.scc-footer-green .nav-link,
 .scc-footer-green .nav-link {
     font-family: 'Poppins', sans-serif;
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
