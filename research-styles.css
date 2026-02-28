@@ -72,21 +72,60 @@ body.research-footer-red .navbar,
 
 body.research-footer-red .nav-link,
 .research-footer-red .nav-link {
-    color: rgba(218, 193, 177, 0.85) !important;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(218, 193, 177, 0.8) !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding: 0.5rem 0;
+    letter-spacing: 0.5px;
+    display: inline-block;
 }
 
 body.research-footer-red .nav-link:hover,
-body.research-footer-red .nav-link.active,
-.research-footer-red .nav-link:hover,
-.research-footer-red .nav-link.active {
+.research-footer-red .nav-link:hover {
     color: #FFFFFF !important;
-    text-shadow: 0 0 10px rgba(172, 116, 108, 0.8);
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 20px rgba(255, 107, 107, 0.6);
 }
 
 body.research-footer-red .nav-link::after,
 .research-footer-red .nav-link::after {
-    background: rgba(172, 116, 108, 0.9);
-    box-shadow: 0 0 10px rgba(172, 116, 108, 0.6);
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #FF6B6B;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 15px #FF6B6B;
+}
+
+body.research-footer-red .nav-link:hover::after,
+body.research-footer-red .nav-link.active::after,
+.research-footer-red .nav-link:hover::after,
+.research-footer-red .nav-link.active::after {
+    width: 100%;
+}
+
+/* Ensure active state persists and is visible */
+body.research-footer-red .nav-link.active,
+.research-footer-red .nav-link.active {
+    position: relative;
+    color: #FFFFFF !important;
+    text-shadow: 0 0 15px #FF6B6B !important;
+    transform: translateY(-2px);
+}
+
+body.research-footer-red .nav-link.active::after,
+.research-footer-red .nav-link.active::after {
+    width: 100% !important;
+    background: #FF6B6B !important;
+    box-shadow: 0 0 15px #FF6B6B !important;
+    height: 2px !important;
 }
 
 body.research-footer-red .navbar-toggler,

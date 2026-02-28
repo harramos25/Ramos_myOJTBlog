@@ -51,21 +51,60 @@ body.scc-footer-green .navbar-brand.logo,
 
 body.scc-footer-green .nav-link,
 .scc-footer-green .nav-link {
+    font-family: 'Poppins', sans-serif;
     color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding: 0.5rem 0;
+    letter-spacing: 0.5px;
+    display: inline-block;
 }
 
 body.scc-footer-green .nav-link:hover,
-body.scc-footer-green .nav-link.active,
-.scc-footer-green .nav-link:hover,
-.scc-footer-green .nav-link.active {
+.scc-footer-green .nav-link:hover {
     color: #FFFFFF !important;
-    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 20px rgba(165, 214, 167, 0.6);
 }
 
 body.scc-footer-green .nav-link::after,
 .scc-footer-green .nav-link::after {
-    background: rgba(76, 175, 80, 0.9);
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #A5D6A7;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 15px #A5D6A7;
+}
+
+body.scc-footer-green .nav-link:hover::after,
+body.scc-footer-green .nav-link.active::after,
+.scc-footer-green .nav-link:hover::after,
+.scc-footer-green .nav-link.active::after {
+    width: 100%;
+}
+
+/* Ensure active state persists and is visible */
+body.scc-footer-green .nav-link.active,
+.scc-footer-green .nav-link.active {
+    position: relative;
+    color: #FFFFFF !important;
+    text-shadow: 0 0 15px #A5D6A7 !important;
+    transform: translateY(-2px);
+}
+
+body.scc-footer-green .nav-link.active::after,
+.scc-footer-green .nav-link.active::after {
+    width: 100% !important;
+    background: #A5D6A7 !important;
+    box-shadow: 0 0 15px #A5D6A7 !important;
+    height: 2px !important;
 }
 
 body.scc-footer-green .navbar-toggler,
@@ -161,10 +200,13 @@ body.scc-footer-green .navbar-toggler:focus,
 }
 
 @keyframes float-scc-particle {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
         opacity: 0.15;
     }
+
     50% {
         transform: translate(60px, -60px) scale(1.2);
         opacity: 0.25;
@@ -721,6 +763,7 @@ body.scc-footer-green .footer .contact-info i.fa-envelope,
 
 /* Center logo when navbar-toggler is visible (Bootstrap lg breakpoint) */
 @media (max-width: 991.98px) {
+
     body.scc-footer-green .logo,
     body.scc-footer-green .navbar-brand.logo,
     .scc-footer-green .logo,
@@ -757,6 +800,7 @@ body.scc-footer-green .footer .contact-info i.fa-envelope,
 }
 
 @media (max-width: 768px) {
+
     body.scc-footer-green .logo,
     body.scc-footer-green .navbar-brand.logo,
     .scc-footer-green .logo,
@@ -822,6 +866,7 @@ body.scc-footer-green .footer .contact-info i.fa-envelope,
 }
 
 @media (max-width: 480px) {
+
     body.scc-footer-green .logo,
     body.scc-footer-green .navbar-brand.logo,
     .scc-footer-green .logo,
@@ -859,4 +904,3 @@ body.scc-footer-green .footer .contact-info i.fa-envelope,
         font-size: 1.6rem;
     }
 }
-

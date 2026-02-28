@@ -97,10 +97,13 @@ body.ched-footer-blue .navbar.scrolled,
 }
 
 @keyframes float-ched-particle {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
         opacity: 0.15;
     }
+
     50% {
         transform: translate(60px, -60px) scale(1.2);
         opacity: 0.25;
@@ -137,6 +140,7 @@ body.ched-footer-blue .navbar.scrolled,
         opacity: 0;
         transform: scale(1);
     }
+
     to {
         opacity: 1;
         transform: scale(1.02);
@@ -172,6 +176,7 @@ body.ched-footer-blue .navbar.scrolled,
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -187,9 +192,65 @@ body.ched-footer-blue .navbar.scrolled,
     margin: 0;
 }
 
-/* ============================================
-   SECTION 2: ABOUT CHED SECTION
-   ============================================ */
+/* CHED Navbar Links */
+body.ched-footer-blue .nav-link,
+.ched-footer-blue .nav-link {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding: 0.5rem 0;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+body.ched-footer-blue .nav-link:hover,
+.ched-footer-blue .nav-link:hover {
+    color: #FFFFFF !important;
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 20px rgba(144, 202, 249, 0.6);
+}
+
+body.ched-footer-blue .nav-link::after,
+.ched-footer-blue .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #90CAF9;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 15px #90CAF9;
+}
+
+body.ched-footer-blue .nav-link:hover::after,
+body.ched-footer-blue .nav-link.active::after,
+.ched-footer-blue .nav-link:hover::after,
+.ched-footer-blue .nav-link.active::after {
+    width: 100%;
+}
+
+/* Ensure active state persists and is visible */
+body.ched-footer-blue .nav-link.active,
+.ched-footer-blue .nav-link.active {
+    position: relative;
+    color: #FFFFFF !important;
+    text-shadow: 0 0 15px #90CAF9 !important;
+    transform: translateY(-2px);
+}
+
+body.ched-footer-blue .nav-link.active::after,
+.ched-footer-blue .nav-link.active::after {
+    width: 100% !important;
+    background: #90CAF9 !important;
+    box-shadow: 0 0 15px #90CAF9 !important;
+    height: 2px !important;
+}
+
 .ched-about-section {
     padding: 6rem 2rem;
     position: relative;
@@ -422,6 +483,7 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
 
 /* Center logo when navbar-toggler is visible (Bootstrap lg breakpoint) */
 @media (max-width: 991.98px) {
+
     .logo,
     .navbar-brand.logo {
         position: absolute;
@@ -454,6 +516,7 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
 }
 
 @media (max-width: 768px) {
+
     .logo,
     .navbar-brand.logo {
         font-size: 0.95rem;
@@ -533,6 +596,7 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
 }
 
 @media (max-width: 480px) {
+
     .logo,
     .navbar-brand.logo {
         font-size: 0.9rem;
@@ -584,4 +648,3 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
         font-size: 1.6rem;
     }
 }
-

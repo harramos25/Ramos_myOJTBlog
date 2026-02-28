@@ -261,32 +261,33 @@ span.navbar-toggler-icon {
 
 .nav-link {
     font-family: 'Poppins', sans-serif;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     padding: 0.5rem 0;
     letter-spacing: 0.5px;
+    display: inline-block;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 0;
     height: 2px;
     background: var(--hover-color);
     transition: width 0.3s ease;
-    box-shadow: 0 0 10px var(--hover-color);
+    box-shadow: 0 0 15px var(--hover-color);
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
     color: #FFFFFF !important;
-    text-shadow: 0 0 10px var(--hover-color);
+    transform: translateY(-2px) scale(1.05);
+    text-shadow: 0 0 20px rgba(224, 170, 255, 0.6);
 }
 
 .nav-link:hover::after,
@@ -299,6 +300,7 @@ span.navbar-toggler-icon {
     position: relative;
     color: #FFFFFF !important;
     text-shadow: 0 0 15px var(--hover-color) !important;
+    transform: translateY(-2px);
 }
 
 .nav-link.active::after {
