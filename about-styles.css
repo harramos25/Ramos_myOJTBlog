@@ -387,10 +387,10 @@
     }
 
     .carousel-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 2rem 1.5rem 4.5rem; /* Increased bottom padding for indicators */
         min-height: auto;
     }
 
@@ -409,12 +409,14 @@
 
     .carousel-image {
         max-width: 100%;
-        height: 250px;
+        height: 180px; /* Reduced from 250px */
         order: 1;
     }
 
     .carousel-image img {
-        min-height: 250px;
+        min-height: 180px;
+        object-fit: contain; /* Better for screenshots on mobile */
+        background: rgba(0,0,0,0.2);
     }
 
     .carousel-arrow {
@@ -526,8 +528,8 @@
     }
 
     .carousel-content {
-        padding: 1.5rem 1rem;
-        gap: 1.25rem;
+        padding: 1.5rem 1rem 4rem; /* Increased bottom padding */
+        gap: 1rem;
         border-radius: 20px;
     }
 
@@ -546,11 +548,11 @@
     }
 
     .carousel-image {
-        height: 200px;
+        height: 160px; /* Further reduced */
     }
 
     .carousel-image img {
-        min-height: 200px;
+        min-height: 160px;
     }
 
     .carousel-arrow {
