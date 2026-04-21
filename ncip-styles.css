@@ -9,12 +9,20 @@ body.ncip-footer-yellow {
     --purple-light: rgba(0, 0, 0, 0.8) !important;
 }
 
-/* Override body background for NCIP page */
-body.ncip-page,
-body.ncip-footer-yellow,
+body.ncip-footer-yellow::before,
+body.ncip-page::before {
+    background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%);
+}
+
+/* Base styles for NCIP specific elements */
 .ncip-about-section {
     background: linear-gradient(135deg, #FFD166 0%, #FFED85 100%);
-    background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+    .ncip-about-section {
+        background-attachment: scroll;
+    }
 }
 
 /* NCIP Navbar - Yellow Theme */
@@ -22,6 +30,7 @@ body.ncip-footer-yellow .navbar,
 .ncip-footer-yellow .navbar {
     background: rgba(255, 209, 102, 0.3) !important;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 

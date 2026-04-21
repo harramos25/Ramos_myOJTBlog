@@ -3,11 +3,22 @@
    ============================================ */
 
 /* Override body background for CHED page */
-body.ched-footer-blue,
+body.ched-footer-blue::before {
+    background: linear-gradient(135deg, #2196F3 0%, #64B5F6 100%);
+}
+
+/* Base styles for CHED specific elements */
 .ched-hero-section,
 .ched-about-section {
     background: linear-gradient(135deg, #2196F3 0%, #64B5F6 100%);
     background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+    .ched-hero-section,
+    .ched-about-section {
+        background-attachment: scroll;
+    }
 }
 
 /* ============================================
@@ -17,6 +28,7 @@ body.ched-footer-blue .navbar,
 .ched-footer-blue .navbar {
     background: rgba(33, 150, 243, 0.3) !important;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -468,6 +480,10 @@ body.ched-footer-blue .footer .contact-info i.fa-envelope,
    RESPONSIVE DESIGN
    ============================================ */
 @media (max-width: 1024px) {
+    body::before {
+        background-attachment: scroll;
+    }
+
     .ched-about-wrapper {
         grid-template-columns: 1fr;
     }

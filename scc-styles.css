@@ -9,14 +9,25 @@ body.scc-footer-green {
     --purple-light: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* Override body background for SCC page */
-body.scc-footer-green,
+body.scc-footer-green::before {
+    background: linear-gradient(135deg, #4CAF50 0%, #A5D6A7 100%);
+}
+
+/* Base styles for SCC specific elements */
 .scc-hero-section,
 .scc-intro-section,
 .scc-logo-section,
 .scc-vmg-section {
     background: linear-gradient(135deg, #4CAF50 0%, #A5D6A7 100%);
-    background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+    .scc-hero-section,
+    .scc-intro-section,
+    .scc-logo-section,
+    .scc-vmg-section {
+        background-attachment: scroll;
+    }
 }
 
 /* SCC Navbar - Green Theme */
@@ -24,6 +35,7 @@ body.scc-footer-green .navbar,
 .scc-footer-green .navbar {
     background: rgba(76, 175, 80, 0.3) !important;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 

@@ -33,14 +33,24 @@ body.research-footer-red {
     }
 }
 
-/* Override body background for Research page with Moving Gradient */
-body.research-footer-red,
+body.research-footer-red::before {
+    background: linear-gradient(-45deg, #3d0105, #7f1f0e, #a58570, #3d0105);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Base styles for Research specific elements */
 .research-hero-section {
     background: linear-gradient(-45deg, #3d0105, #7f1f0e, #a58570, #3d0105);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    background-attachment: fixed;
     color: var(--text-beige);
+}
+
+@media (max-width: 1024px) {
+    .research-hero-section {
+        background-attachment: scroll;
+    }
 }
 
 /* Research Navbar - Red Theme */
@@ -48,6 +58,7 @@ body.research-footer-red .navbar,
 .research-footer-red .navbar {
     background: rgba(61, 1, 5, 0.4) !important;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(218, 193, 177, 0.2);
 }
 
@@ -365,6 +376,7 @@ body.research-footer-red .navbar.scrolled .navbar-brand.logo,
 .research-diary-entry {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 2px solid rgba(218, 193, 177, 0.2);
     border-left: 4px solid rgba(172, 116, 108, 0.8);
     border-radius: 20px;
@@ -472,6 +484,7 @@ body.research-footer-red .navbar.scrolled .navbar-brand.logo,
     height: 100%;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 2px solid rgba(218, 193, 177, 0.3);
     border-radius: 20px;
     overflow: hidden;
@@ -569,6 +582,7 @@ body.research-footer-red .navbar.scrolled .navbar-brand.logo,
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 25px;
     padding: 3.5rem;
