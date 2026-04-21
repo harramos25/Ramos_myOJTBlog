@@ -278,6 +278,134 @@
     transform: translateY(-2px);
 }
 
+.see-more-btn {
+    background: transparent;
+    border: none;
+    color: #E0AAFF;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(224, 170, 255, 0.3);
+}
+
+.see-more-btn:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 15px rgba(224, 170, 255, 0.8);
+    transform: translateX(5px);
+}
+
+/* Modal for See More */
+.about-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 0, 70, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.about-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 3rem;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(224, 170, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.modal-text {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+}
+
+.modal-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Custom Scrollbar for Modal */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(224, 170, 255, 0.4);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(224, 170, 255, 0.6);
+}
+
 /* Carousel Navigation Arrows */
 .carousel-arrow {
     width: 60px;
@@ -387,10 +515,10 @@
     }
 
     .carousel-content {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-        padding: 2rem 1.5rem 4.5rem; /* Increased bottom padding for indicators */
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
         min-height: auto;
     }
 
@@ -409,14 +537,12 @@
 
     .carousel-image {
         max-width: 100%;
-        height: 180px; /* Reduced from 250px */
+        height: 250px;
         order: 1;
     }
 
     .carousel-image img {
-        min-height: 180px;
-        object-fit: contain; /* Better for screenshots on mobile */
-        background: rgba(0,0,0,0.2);
+        min-height: 250px;
     }
 
     .carousel-arrow {
@@ -528,8 +654,8 @@
     }
 
     .carousel-content {
-        padding: 1.5rem 1rem 4rem; /* Increased bottom padding */
-        gap: 1rem;
+        padding: 1.5rem 1rem;
+        gap: 1.25rem;
         border-radius: 20px;
     }
 
@@ -548,11 +674,11 @@
     }
 
     .carousel-image {
-        height: 160px; /* Further reduced */
+        height: 200px;
     }
 
     .carousel-image img {
-        min-height: 160px;
+        min-height: 200px;
     }
 
     .carousel-arrow {

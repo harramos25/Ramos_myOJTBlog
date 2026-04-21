@@ -153,13 +153,28 @@
                             <div class="carousel-text">
                                 <h2 class="carousel-title">NCIP IX Job Application Portal</h2>
                                 <div class="carousel-description" style="animation: fade-in-delay 0.6s ease-out 0.2s forwards;">
-                                    <p style="margin-bottom: 0.8rem;">We developed a web-based platform to digitalize NCIP Region IX’s hiring process—transforming manual paper-based workflows into a centralized, efficient recruitment system.</p>
-                                    <p style="margin-bottom: 1.2rem;">The portal features secure document handling and real-time tracking, ensuring data privacy while providing a user-friendly interface for both applicants and administrators.</p>
-                                    <a href="https://ncip-ix-job-portal.vercel.app/" target="_blank" class="carousel-btn">
-                                        Visit Project <i class="fas fa-external-link-alt" style="margin-left: 8px; font-size: 0.9rem;"></i>
-                                    </a>
+                                    <p style="margin-bottom: 0.5rem;">During my On-the-Job Training, one of the systems we developed is the NCIP Job Application System, a web-based platform designed to improve the recruitment process of NCIP Region IX.</p>
+                                    <button class="see-more-btn" id="see-more-ncip">
+                                        See more <i class="fas fa-plus-circle"></i>
+                                    </button>
+                                    <div style="margin-top: 1rem;">
+                                        <a href="https://ncip-ix-job-portal.vercel.app/" target="_blank" class="carousel-btn">
+                                            Visit Project <i class="fas fa-external-link-alt" style="margin-left: 8px; font-size: 0.9rem;"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- Hidden Full Content for NCIP -->
+                            <template id="full-content-ncip">
+                                <h2 class="modal-title">NCIP IX Job Application Portal</h2>
+                                <div class="modal-text">
+                                    <p>During my On-the-Job Training, one of the systems we developed is the NCIP Job Application System, a web-based platform designed to improve the recruitment process of NCIP Region IX.</p>
+                                    <p>This project focuses on transforming the traditional manual hiring process into a more organized, efficient, and digital system. Instead of handling paper-based applications, everything is now managed in one centralized platform where applicants can easily submit their requirements online, and administrators can review and manage applications more effectively.</p>
+                                    <p>The system also includes features such as secure document handling, real-time application tracking, and data privacy controls, ensuring that all applicant information is properly managed and protected.</p>
+                                    <p>Working on this project helped me understand the importance of user-friendly design, data organization, and system security in real-world applications. It also gave me valuable experience in developing solutions that can truly help improve existing processes in an organization.</p>
+                                    <p>This system is not just a requirement for our OJT, but also a step toward supporting the digital transformation of government services.</p>
+                                </div>
+                            </template>
                             <div class="carousel-image">
                                 <img src="images/job_app.jpg" alt="NCIP IX Job Application Portal">
                             </div>
@@ -238,6 +253,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Overlay -->
+    <div class="about-modal" id="about-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modal-body-content">
+                <!-- Content will be injected here via JS -->
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>

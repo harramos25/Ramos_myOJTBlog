@@ -63,21 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Auto-play carousel (optional - uncomment if desired)
-    // let autoPlayInterval = setInterval(nextSlide, 5000);
-
-    // Pause auto-play on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', () => {
-            // if (autoPlayInterval) clearInterval(autoPlayInterval);
-        });
-
-        carouselContainer.addEventListener('mouseleave', () => {
-            // autoPlayInterval = setInterval(nextSlide, 5000);
-        });
-    }
-
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
@@ -113,6 +98,51 @@ document.addEventListener('DOMContentLoaded', function() {
             // Swipe right - previous slide
             prevSlide();
         }
+    }
+
+    // Modal Logic for "See more"
+    const modal = document.getElementById('about-modal');
+    const modalBody = document.getElementById('modal-body-content');
+    const closeBtn = document.getElementById('modal-close');
+    const seeMoreBtns = document.querySelectorAll('.see-more-btn');
+
+    if (modal && modalBody && closeBtn) {
+        seeMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent carousel conflicts
+                const contentId = this.id.replace('see-more-', 'full-content-');
+                const template = document.getElementById(contentId);
+                
+                if (template) {
+                    modalBody.innerHTML = template.innerHTML;
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                }
+            });
+        });
+
+        // Close modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        
+        // Close on outside click
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
     }
 
     // Initialize first slide

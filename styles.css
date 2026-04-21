@@ -241,15 +241,16 @@ body::before {
 }
 
 .navbar-toggler {
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.8);
     padding: 0.5rem 0.75rem;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     position: relative;
     top: 0px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(224, 170, 255, 0.3);
+    box-shadow: 0 0 15px rgba(224, 170, 255, 0.5);
+    transform: scale(1.05);
 }
 
 .navbar-toggler:hover {
