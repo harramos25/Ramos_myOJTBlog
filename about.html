@@ -215,6 +215,37 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Slide 5: OJT Time Tracking Web App -->
+                    <div class="carousel-slide">
+                        <div class="carousel-content">
+                            <div class="carousel-text">
+                                <h2 class="carousel-title">OJT Time Tracking Web App</h2>
+                                <div class="carousel-description" style="animation: fade-in-delay 0.6s ease-out 0.2s forwards;">
+                                    <p style="margin-bottom: 0.5rem;">A web-based Daily Time Record system developed during my OJT to replace manual processes with automated time logging and DTR document generation.</p>
+                                    <button class="see-more-btn" id="see-more-dtr">
+                                        See more <i class="fas fa-plus-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Hidden Full Content for DTR System -->
+                            <template id="full-content-dtr">
+                                <h2 class="modal-title">OJT Time Tracking Web App</h2>
+                                <div class="modal-text">
+                                    <p>During my On-the-Job Training, I developed a web-based Daily Time Record system called OJT Time Tracking. This system was created to replace the manual process of writing DTR on paper and encoding hours in Excel. It automates time logging, validation, computation of hours, and generation of printable DTR documents for submission.</p>
+                                    <p>The system allows multiple users to log their time-in and time-out using a secure PIN-based login, similar to a profile picker. Each user can record AM IN, AM OUT, PM IN, and PM OUT in real time, while the system automatically handles time validation, session order, and status such as Absent, Holiday, Saturday, and Sunday.</p>
+                                    <p>If a user forgets to log their time on a specific day, they can use the Encode Past feature to input previous records with built-in validation to prevent incorrect entries. All logs are stored in a cloud database using Supabase, ensuring that data is saved securely even if the device is turned off or the browser is closed.</p>
+                                    <p>The system also includes a History and Progress page where users can track their accumulated hours based on the 500-hour OJT requirement. It calculates total rendered hours, predicts the estimated completion date, and visually shows attendance through a calendar view.</p>
+                                    <p>One of the key features of the system is the automated DTR document generation. Users can select a month and export or print a professionally formatted DTR that includes the school name, government agency name, and official logos. The layout is optimized to fit cleanly on bond paper for official submission to the dean.</p>
+                                    <p>This web app was built using HTML, CSS, and JavaScript, deployed on Vercel as a Progressive Web App (PWA), allowing it to be installed on mobile devices and work even when offline. Supabase is used as the backend database, with local storage as a fallback when there is no internet connection.</p>
+                                    <p>Overall, the system transforms the traditional pen-and-paper DTR process into a digital, automated, and user-friendly time tracking solution designed specifically for OJT students.</p>
+                                </div>
+                            </template>
+                            <div class="carousel-image">
+                                <img src="images/dtr_system.jpg" alt="OJT Time Tracking System">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <button class="carousel-arrow carousel-next" aria-label="Next slide">
@@ -228,6 +259,7 @@
                 <button class="indicator" data-slide="1"></button>
                 <button class="indicator" data-slide="2"></button>
                 <button class="indicator" data-slide="3"></button>
+                <button class="indicator" data-slide="4"></button>
             </div>
         </div>
     </section>
